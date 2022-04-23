@@ -15,3 +15,6 @@ set ruler           " show line and column number
 set showcmd         " show (partial) command in status line
 
 syntax on           " syntax highlighting
+filetype plugin indent on
+
+autocmd! bufwritepost ~/.vimrc source ~/.vimrc
