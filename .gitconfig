@@ -1,0 +1,7 @@
+[user]
+	name = Ivan Shcheklein
+	email = shcheklein@gmail.com
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
