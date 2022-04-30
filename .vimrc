@@ -17,4 +17,9 @@ set showcmd         " show (partial) command in status line
 syntax on           " syntax highlighting
 filetype plugin indent on
 
+" show numbers to the left in grey
+set nu
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
 autocmd! bufwritepost ~/.vimrc source ~/.vimrc
+
