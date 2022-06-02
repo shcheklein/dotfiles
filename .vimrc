@@ -5,6 +5,7 @@ set backspace=indent,eol,start
 
 au BufRead,BufNewFile Makefile* set noexpandtab
 
+set re=2            " TS highlight hangs otherwise
 set expandtab       " enter spaces when tab is pressed
 set textwidth=80    " break lines when line length increases
 set tabstop=4       " use 4 spaces to represent tab
@@ -20,6 +21,7 @@ filetype plugin indent on
 " show numbers to the left in grey
 set nu
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+:nmap <F12> :set invnumber<CR>
 
 autocmd! bufwritepost ~/.vimrc source ~/.vimrc
 
