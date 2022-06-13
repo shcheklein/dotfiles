@@ -1,5 +1,6 @@
 filetype off
 
+set laststatus=2
 set t_Co=256
 set backspace=indent,eol,start
 
@@ -19,9 +20,13 @@ syntax on           " syntax highlighting
 filetype plugin indent on
 
 " show numbers to the left in grey
+" show vertical line at 81
+" toggle with F12
 set nu
+set colorcolumn=81
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-:nmap <F12> :set invnumber<CR>
+highlight ColorColumn ctermbg=DarkGrey guibg=DarkGrey
+:nnoremap <F12> :set invnumber \| let &cc = &cc == '' ? '81' : ''<CR>
 
 autocmd! bufwritepost ~/.vimrc source ~/.vimrc
 
