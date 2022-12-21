@@ -26,7 +26,11 @@ set nu
 set colorcolumn=81
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 highlight ColorColumn ctermbg=DarkGrey guibg=DarkGrey
+
 :nnoremap <F12> :set invnumber \| let &cc = &cc == '' ? '81' : ''<CR>
+
+set switchbuf=useopen
+:nnoremap <F5> :buffers<CR>:sb<Space>
 
 autocmd! bufwritepost ~/.vimrc source ~/.vimrc
 
